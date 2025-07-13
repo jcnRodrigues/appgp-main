@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -15,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "App Gestão de Pratrimonio",
+  title: "AppGP - Gestão de Pratrimonio",
   description: "Aplicação de Gestão de Patrimônio e Recursos da Empresa",
 };
 
@@ -28,8 +29,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <header>
-          <h1 className={styles.title}>
-            App<span className={styles.title}>-</span>
+          <img src="/Parex.png" alt="AppGP Logo" className={styles.logo} height={'50px'} width={'50px'}/>
+          <h1 className={styles.title} >
+            <span className={styles.title}>AppGP -</span>
             <span className={styles.titleSecondWord}>Gestão de Patrimônio</span>
           </h1>
         </header>
