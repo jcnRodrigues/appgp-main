@@ -16,17 +16,8 @@ model User {
   name      String
   email     String   @unique
   password  String
+  dateNascimento DateTime
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
 
-model Patrimonio {
-  id            Int      @id @default(autoincrement())
-  patrimonioId  String   @unique
-  descricao     String
-  valor         Float
-  dataAquisicao DateTime
-  responsavel   String
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
-}
