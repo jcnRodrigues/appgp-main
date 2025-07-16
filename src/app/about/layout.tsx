@@ -1,4 +1,4 @@
-import Header from "@/ui/components/Header/header";
+import Header from "@/ui/components/Header/HeaderHome";
 
     export default function AboutLayout({children}: Readonly<{
   children: React.ReactNode;

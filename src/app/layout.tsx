@@ -1,18 +1,11 @@
-/* eslint-disable @next/next/no-img-element */
+
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {Syne} from "next/font/google";
 import "./globals.css";
-import styles from "./page.module.css";
 
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const syne = Syne({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ['400', '500', '600', '700', '800']
 });
 
 export const metadata: Metadata = {
@@ -27,14 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <header>
-          <img src="/Parex.png" alt="AppGP Logo" className={styles.logo} height={'50px'} width={'50px'}/>
-          <h1 className={styles.title} >
-            <span className={styles.title}>AppGP -</span>
-            <span className={styles.titleSecondWord}>Gestão de Patrimônio</span>
-          </h1>
-        </header>
+      <body className={`${syne.className} antialiased`}>
         {children}
       </body>
     </html>
